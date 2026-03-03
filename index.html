@@ -3,33 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auralith One - Fone de Ouvido</title>
+    <title>AURALITH One - Fone de Ouvido</title>
+    <link rel="shortcut icon" href="./imagens/Sem nome (514 x 514 px) (1).svg" type="image/svg">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="/estilos/mobile.css" media="screen and (max-width: 768px)">
+    <script src="https://kit.fontawesome.com/dfb0291cd2.js" crossorigin="anonymous"></script>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+    </style>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
-        <div id="logo"></div>
+        <img id="logo" src="imagens/logo.png" alt="Logo Auralith">
+        <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
         <nav id="menu">
             <a href="#">Produto</a>
             <a href="#">Tecnologia</a>
             <a href="#">Especificações</a>
         </nav>
-        <a href="#" class="button">Comprar agora</a>
+        <a href="#" class="botao botao-p">Comprar <i class="fa-solid fa-arrow-up-right-from-square" style="color: rgb(255, 255, 255);"></i></a>
+
     </header>
 
     <main> 
-        <section id="hero"> <!-- Flex -->
+        <section class="hero"> <!-- Flex -->
             <div class="hero-texto">
                 <h1>AURALITH One</h1>
-                <p>Som em sua forma mais pura.</p>
-                <a href="#" class="button">Comprar agora</a>
+                <p>Som em sua forma mais pura</p>
             </div>
 
             <div class="hero-imagem">
-                <img src="#" alt="">
+                <img src="imagens/Fones-de-ouvido-Auralith-One.png" alt="Headphone Auralith One">
+            </div>
+
+           <div class="hero-cta">
+               <p class="preco">R$ 1.999,00</p>
+               <a href="#" class="botao-comprar">Comprar agora</a>
             </div>
         </section>
 
-        <section id="tecno-container"> <!-- Grid -->
+        <section class="tecno-container"> <!-- Grid -->
             <h2>O AURALITH One redefine o que significa ouvir</h2>
 
             <div class="tecno-grid">
@@ -55,7 +68,7 @@
             </div>
         </section>
 
-        <section id="experiencia-container">    
+        <section class="experiencia-container">    
             <h2>Conheça todos os detalhes</h2>
 
             <div class="experiencia">
@@ -89,7 +102,7 @@
             </div>
         </section>
 
-        <section id="ficha-container">
+        <section class="ficha-container">
             <h2>Ficha Técnica</h2>
             
             <dl class="ficha-list">
@@ -169,4 +182,25 @@
         </div>
     </footer>
 </body>
+
+<script>
+    function clickMenu() {
+        var itens = document.getElementById('menu')
+        if (itens.style.display == 'flex') {
+            itens.style.display = 'none'
+        } else {
+            itens.style.display = 'flex'
+        }
+    }
+
+    function mudouTamanho() {
+        var itens = document.getElementById('menu')
+        if (window.innerWidth >= 768) {
+            itens.style.display = 'flex'
+        } else {
+            itens.style.display = 'none'
+        }
+    }
+</script>
+
 </html>
