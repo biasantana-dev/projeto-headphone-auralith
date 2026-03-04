@@ -17,14 +17,12 @@ body {
 
 h2 {
     text-align: center;
-}
-h2, h3 {
-    font-weight: 600;
-    padding-bottom: 16px;
+    font-size: 1.6em;
 }
 
-h3 {
-    padding-top: 16px;
+h2 {
+    font-weight: 600;
+    padding-bottom: 30px;
 }
 
 header{
@@ -40,7 +38,7 @@ header{
 }
 
 nav#menu {
-    display: flex;
+    display: none;
     flex-flow: column nowrap;
     text-align: center;
 }
@@ -76,20 +74,21 @@ nav#menu a:hover {
     text-decoration: underline;
 }
 
-section {
-  padding: 35px 20px;
-}
-
 section + section {
      border-top: 1px solid #e5e5e5;
-     margin-left: 25px;
-     margin-right: 25px;
+}
+
+.container {
+    width: 100%;
+    padding: 30px 40px;
 }
 
 .hero {
+    padding-bottom: 30px;
+}
+
+.hero-conteudo {
     display: flex;
-    padding: 10px 0px 30px 0px;
-    margin-bottom: 15px;
     flex-direction: column;
     align-items: center;
     gap: 30px;
@@ -99,29 +98,21 @@ h1 {
     font-size: 2em;
     font-weight: 700;
 }
+
 .hero-texto {
+    order: 0;
     text-align: center;
-    padding-top: 12px;
     line-height: 2em;
 }
 
-.hero-imagem {
-    width: 85%;
-}
-
-.hero-imagem img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 .hero-cta {
+    order: 2;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-top: 32px;
+    margin-top: 30px;
 }
 
 .preco {
@@ -156,8 +147,50 @@ h1 {
     transform: translateY(0) scale(0.98);
 }
 
+.hero-imagem {
+    order: 1;
+    width: 85%;
+}
 
-.experiencia-container p {
-    letter-spacing: 1px;
-    line-height: 1.5em;
+.hero-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tecnologias {
+    padding: 10px 0px;
+}
+
+.tecno-grid {
+    display: grid;
+    gap: 50px;
+    align-items: center;
+}
+
+.tecno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+}
+
+
+.tecno h3 {
+    font-size: 1.2em;
+}
+
+.tecno p {
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+.tecno img {
+    height: 65px;
+    padding-bottom: 7px;
+}
+
+#carreg {
+    height: 55px;
 }
