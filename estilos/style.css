@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+/* Mobile */
+
 body {
     font-family: "Manrope", sans-serif;
     font-weight: 400;
@@ -44,7 +46,7 @@ header{
     height: 35px;
 }
 
-nav#menu {
+#menu {
     display: none;
     flex-flow: column nowrap;
     text-align: center;
@@ -55,7 +57,7 @@ nav#menu {
     padding: 6px;
 }
 
-nav#menu a {
+#menu a {
     font-weight: 500;
     text-decoration:none;
     width: 100%;
@@ -64,7 +66,7 @@ nav#menu a {
     font-size: 1.1em;
 }
 
-nav#menu a:hover {
+#menu a:hover {
     color: #222222c6;
 }
 
@@ -331,4 +333,17 @@ footer .container {
     font-size: 0.7em;
     font-weight: 600;
     opacity: 0.6;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    #burger {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: row;
+    }
 }
