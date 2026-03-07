@@ -17,6 +17,11 @@ body {
     color: black;
 }
 
+.container {
+    width: 100%;
+    padding: 48px 24px;
+}
+
 h1 {
     font-size: 2em;
     font-weight: 600;
@@ -66,10 +71,6 @@ header{
     font-size: 1.1em;
 }
 
-#menu a:hover {
-    color: #222222c6;
-}
-
 .botao-p {
     width: 100%;
     text-align: center;
@@ -81,11 +82,6 @@ header{
 
 .botao-p:hover {
     text-decoration: underline;
-}
-
-.container {
-    width: 100%;
-    padding: 48px 24px;
 }
 
 section {
@@ -101,70 +97,74 @@ section:last-child {
 }
 
 .hero-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 30px;
 }
 
 .hero-texto {
-    order: 0;
     text-align: center;
     line-height: 2em;
+    grid-row: 1 / 2;
 }
 
-.hero-cta {
-    order: 2;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.preco {
-    font-size: 1.8em;
-    font-weight: 600;
-    margin: 0;
-    letter-spacing: 0.6px;
-}
-
-.botao-comprar {
-    display: block;
-    width: 90%;
-    max-width: 360px;
-    text-align: center;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 16px 0px;
-    margin-top: 5px;
-    border-radius: 999px;
-    font-weight: 500;
-    letter-spacing: 0.6px;
-    transition: background-color 0.3s ease, transform 0.6s ease, box-shadow 0.2s ease;
-}
-
-.botao-comprar:hover {
-    background-color: #222;
-    transform: translateY(-2px);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.108);
-}
-
-.botao-comprar:active {
-    transform: translateY(0) scale(0.98);
+.hero-texto p {
+    max-width: 320px;
 }
 
 .hero-imagem {
-    order: 1;
     width: 85%;
+    grid-row: 2 / 3;
 }
 
 .hero-imagem img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.hero-cta {
+    width: 100%;
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.preco {
+    font-size: 1.8em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 0.6px;
+}
+
+.botao-comprar {
+    width: 90%;
+    max-width: 360px;
+    font-weight: 600;
+    padding: 16px 40px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
+    border-radius: 999px;
+    letter-spacing: 0.6px;
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.botao-comprar:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.preco span {
+    font-size: 0.7em;
+    margin-right: 4px;
 }
 
 .tecnologias {
@@ -299,7 +299,7 @@ footer .container {
     text-decoration: none;
     color: black;
     font-weight: 600;
-    font-weight: 0.85em;
+    font-sizw: 0.85em;
     opacity: 0.82;
     padding-bottom: 10px;
     border-bottom: 1px solid #dadadab2;
@@ -338,6 +338,18 @@ footer .container {
 /* Tablet */
 
 @media (min-width: 768px) {
+    header{
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    #logo {
+        height: 47px;
+    }
+
     #burger {
         display: none;
     }
@@ -345,5 +357,117 @@ footer .container {
     #menu {
         display: flex;
         flex-direction: row;
+        gap: 30px;
     }
+
+    #menu a {
+        font-weight: 500;
+        text-decoration:none;
+        width: 100%;
+        color: black;
+        font-size: 1.1em;
+        padding: 0px;
+    }
+
+    #menu a:hover {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+
+    .botao-p {
+        font-size: 1.1em;
+        padding: 12px 0px;
+    }
+
+    .container {    
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 60px;
+   }
+
+    .hero {
+        padding: 60px 0px 80px 0px;
+    }
+
+    h1{
+        font-size: 2.3em;
+        letter-spacing: -1px;
+        line-height: 1.15em;
+    }
+
+    .hero-conteudo {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        align-items: center;
+        gap: 0px 45px;
+    }
+
+    .hero-texto {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        text-align: left;
+        justify-self: start;
+        padding-bottom: 20px;
+    }
+
+    .hero-texto p {
+        max-width: px;
+        font-size: 1.1em;
+        opacity: 0.7;
+        margin-top: 6px;
+        letter-spacing: 0.2px;
+    }
+
+    .hero-cta {
+        max-width: 380px;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        align-items: flex-start;
+        align-self: start;
+        gap: 18px;
+        margin-top: 12px;
+
+    }
+
+    .preco {
+        font-size: 1.9em;
+        font-weight: 500;
+        padding-left: 10%;
+    }
+
+    .preco span {
+        font-size: 0.6em;
+        opacity: 0.7;
+        margin-right: 6px;
+    }
+
+    .botao-comprar {
+        max-width: 250px;
+    }
+
+    .hero-imagem {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        width: 100%;
+        justify-self: center;
+    }
+
+    .hero-imagem img {
+        width: 100%;
+        max-width: 450px;
+    }
+}       
+
+
+/* desktop */
+@media (min-width: 1024px) {
+
+    body {
+        background-color: aqua;
+    }
+    .container {
+    max-width: 1200px;
+}
+
 }
