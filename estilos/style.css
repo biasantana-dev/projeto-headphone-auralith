@@ -19,7 +19,7 @@ body {
 
 .container {
     width: 100%;
-    padding: 48px 24px;
+    padding: 60px 24px;
 }
 
 h1 {
@@ -31,7 +31,7 @@ h2 {
     text-align: center;
     font-size: 1.7em;
     font-weight: 600;
-    padding-top: 40px;
+    padding-top: 60px;
 }
 
 h3 {
@@ -110,7 +110,7 @@ section:last-child {
 }
 
 .hero-texto p {
-    max-width: 320px;
+    padding-top: 6px;
 }
 
 .hero-imagem {
@@ -131,7 +131,7 @@ section:last-child {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .preco {
@@ -143,9 +143,9 @@ section:last-child {
 
 .botao-comprar {
     width: 90%;
-    max-width: 360px;
+    max-width: 300px;
     font-weight: 600;
-    padding: 16px 40px;
+    padding: 14px;
     text-align: center;
     background-color: black;
     color: white;
@@ -172,7 +172,7 @@ section:last-child {
 }
 
 #difer {
-    padding: 0px 0px 25px 0px;
+    padding: 0px 0px 40px 0px;
 }
 
 .tecno-grid {
@@ -186,7 +186,8 @@ section:last-child {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2px;
+    padding-top: 20px;
+    gap: 10px;
 }
 
 .tecno p {
@@ -237,13 +238,13 @@ section:last-child {
 
 .detalhe h3 {
     font-size: 1.4em; 
-    margin: 10px 0px 10px 0;
+    margin: 8px 0px 35px;
 }
 
 .detalhe p {
     line-height: 1.6em;
     opacity: 0.78;
-    margin-top: 6px;
+    margin-top: 20px;
 }
 
 .detalhe:last-child {
@@ -387,7 +388,7 @@ footer .container {
    }
 
     .hero {
-        padding: 60px 0px 80px 0px;
+        padding: 60px 0px 70px;
     }
 
     h1{
@@ -399,16 +400,15 @@ footer .container {
     .hero-conteudo {
         display: grid;
         grid-template-columns: 1fr 1.3fr;
-        align-items: center;
-        gap: 0px 45px;
+        align-items: end;
+        gap: 0px 60px;
     }
 
     .hero-texto {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        text-align: left;
-        justify-self: start;
-        padding-bottom: 20px;
+        text-align: center;
+        padding-bottom: 30px;
         padding-left: 10px;
     }
 
@@ -422,10 +422,10 @@ footer .container {
     .hero-cta {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        align-items: flex-start;
+        align-items: center;
         align-self: start;
-        gap: 18px;
-        margin-top: 12px;
+        gap: 15px;
+        margin-top: 18px;
 
     }
 
@@ -462,7 +462,7 @@ footer .container {
 
     .tecno-grid {
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: repeat(2, 280px);
         grid-template-columns: 1fr 1fr;
         justify-content: center;
     }
@@ -488,9 +488,11 @@ footer .container {
     .hero-conteudo {
         display: grid;
         grid-template-columns: 1fr 1.2fr;
-        align-items: center;
     }
 
+    .hero-texto {
+        padding-bottom: 45px;
+    }
 
     .hero-texto p {
         font-size: 1.2em
@@ -506,7 +508,7 @@ footer .container {
     .hero-cta {
         margin-top: 16px;
     }
-
+    
     .botao-comprar {
         max-width: 290px;
     }
@@ -514,6 +516,5 @@ footer .container {
     .preco {
         width: 80%;
         text-align: center;
-        padding-left: 0px;
     }
 }
