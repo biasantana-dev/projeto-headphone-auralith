@@ -598,7 +598,7 @@ footer .container {
     }
 
     h2 {
-        font-size: 2em;
+        font-size: 1.9em;
     }
 
     h3 {
@@ -607,6 +607,7 @@ footer .container {
 
     #menu a {
         font-size: 1.2em;
+        font-weight: 520;
     }
 
     .botao-p {
@@ -659,8 +660,28 @@ footer .container {
         max-width: 300px;
     }
 
+    .tecno-grid {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(2, 260px);
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        row-gap: 35px;
+        column-gap: 80px;
+
+    }
+
+    .tecno img {
+        height: 68px;
+        padding-bottom: 10px;
+    }
+
     .tecno p {
         font-size: 1.09em;
+    }
+
+    .detalhes .container {
+        max-width: 900px;
     }
 
     .detalhe-item summary {
@@ -675,6 +696,45 @@ footer .container {
         font-size: 1.09em;
         opacity: 0.85;
     }
+
+    .ficha .container {
+        max-width: 900px;
+    }
     
-    
+    .ficha-list dt {
+       font-size: 1.09em;
+    }
+
+    .ficha-list dd {
+        font-size: 1.08em;
+    }
+
+    .ficha .container {
+        padding-bottom: 8px;
+    }
+
+    .footer-links {
+        padding: 10px 0px;
+    }
+
+    .footer-links a {
+        font-size: 1.1em;
+        opacity: 1;
+        font-weight: 550;
+    }
+
+    .footer-links a:hover {
+        opacity: 0.82;
+    }
+
+    .footer-social {
+        gap: 50px;
+        margin: 10px 0px 20px;
+    }
+
+    .footer-copy {
+        font-size: 0.8em;
+        opacity: 0.7;
+        margin-bottom: -10px;
+    }
 }
