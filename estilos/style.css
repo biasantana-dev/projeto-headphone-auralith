@@ -187,11 +187,11 @@ section:last-child {
     align-items: center;
     text-align: center;
     padding-top: 20px;
-    gap: 15px;
+    gap: 8px;
 }
 
 .tecno p {
-    font-size: 0.85em;
+    font-size: 1em;
     opacity: 0.7;
 }
 
@@ -346,7 +346,7 @@ footer .container {
     }
 
     #logo {
-        height: 47px;
+        height: 43px;
     }
 
     #burger {
@@ -606,12 +606,12 @@ footer .container {
     }
 
     #menu a {
-        font-size: 1.2em;
+        font-size: 1.16em;
         font-weight: 520;
     }
 
     .botao-p {
-        font-size: 1.09em;
+        font-size: 1em;
         padding: 13px 0px;
     }
 
@@ -624,7 +624,7 @@ footer .container {
     }
     
     .hero-texto {
-        padding-bottom: 60px;
+        padding-bottom: 80px;
         padding-left:3px;
     }
 
